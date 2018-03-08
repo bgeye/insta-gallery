@@ -1,0 +1,18 @@
+var Key = (function(){
+    //grab token from current url
+    // var url = window.location.href;
+    var url = '';
+    var getKey = function(){
+        return url;
+    }
+
+    return{
+        getKey: getKey
+    };
+})()
+
+
+
+
+
+
