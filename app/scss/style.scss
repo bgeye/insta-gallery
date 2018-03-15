@@ -33,7 +33,7 @@ body{
 
 .main{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(232px,1fr/*232px*/));
+    grid-template-columns:repeat(auto-fit,minmax(232px,/*1fr*/232px));
     grid-auto-rows:232px;
     grid-gap:10px;
 }
@@ -78,6 +78,5 @@ body{
         clip-path:circle(50%);
     }
 
->>>>>>> 11bfad8519913ab3ff7f385f7f86dea1f3a5aaf8
 }
 

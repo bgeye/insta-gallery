@@ -42,7 +42,6 @@ var App = (function (k,t) {
     function appendImages(srcUrl,tag){
         var imageContainer = document.querySelector('.main');
         var imgItem = document.createElement('div');
-        var pic = document.createElement('img');
         imgItem.classList.add('image__item');
         imgItem.style.backgroundImage = 'url('+srcUrl+')';
         imageContainer.appendChild(imgItem);
@@ -50,7 +49,6 @@ var App = (function (k,t) {
         var tagContainer = document.createElement('div');
         tagContainer.classList.add('image__tag');
         tagContainer.innerHTML='<span>'+tag.split(', ')+'</span>';
-        //imageContainer.appendChild(tagContainer);
         imgItem.appendChild(tagContainer);
 
     }

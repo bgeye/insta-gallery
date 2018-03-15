@@ -2,17 +2,23 @@
 
 const gulp = require('gulp');
 
+const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
+const jshint = require('gulp-jshint');
 const sass = require('gulp-sass');
 
 
 gulp.task('default',function() {                     //run with 'gulp' or 'gulp default'
-   console.log('hey, hou, I m the default task');
+   console.log('hello world');
 });
 
 gulp.task('sass',function() {
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass())                       //sass präprozessor
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],  //clip path to check!
+            cascade:false
+        }))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
 
@@ -28,6 +34,14 @@ gulp.task('browserSync',function() {
        },
    }) ;
 });
+
+gulp.task('lint',function() {
+   return gulp.src('app/js/**/*.js')
+       .pipe(jshint())
+       .pipe(jshint.reporter('default'));
+});
+
+
 
 gulp.task('watch',['browserSync','sass'],function() {       //executed tasks after call of watch(sass for updates in scss before running task)
 

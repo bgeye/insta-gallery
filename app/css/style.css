@@ -1,16 +1,5 @@
 @charset "UTF-8";
 /*stylesheet for insta api demo*/
-<<<<<<< HEAD
-body {
-  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  color: #cccccc; }
-
-img {
-  padding: 20px; }
-
-ul, li {
-  list-style: none; }
-=======
 /*
     insta colors
     http://www.color-hex.com/color-palette/20465
@@ -34,7 +23,7 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(232px, 232px));
   grid-auto-rows: 232px;
   grid-gap: 10px; }
 
@@ -63,5 +52,5 @@ body {
     top: 5px; }
   .header__profImg {
     width: 54px;
+    -webkit-clip-path: circle(50%);
     clip-path: circle(50%); }
->>>>>>> 11bfad8519913ab3ff7f385f7f86dea1f3a5aaf8
