@@ -1,11 +1,32 @@
 @charset "UTF-8";
 /*stylesheet for insta api demo*/
+* {
+  padding: 0;
+  margin: 0; }
+
 body {
   font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
-  color: #cccccc; }
+  color: tomato;
+  width: 100%;
+  height: 100%; }
 
-img {
-  padding: 20px; }
+.insta {
+  width: 1200px;
+  margin: 0 auto; }
 
-ul, li {
-  list-style: none; }
+.main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 232px;
+  grid-gap: 10px; }
+
+.image__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%; }
+
+.image__tag {
+  padding: 5px;
+  color: #ffffff; }

@@ -14,7 +14,7 @@ var App = (function (k,t) {
     function getImages(){
 
         t.get(reqUrl,function(resData){
-            console.log(resData);
+            //console.log(resData);
             resData.data.forEach(function(element){
                 var resImage = element.images.standard_resolution.url;
                 var resTag = element.caption.text;
@@ -26,18 +26,18 @@ var App = (function (k,t) {
 
 
     function appendImages(srcUrl,tag){
-        var imageContainer = document.querySelector('#image');
+        var imageContainer = document.querySelector('.main');
         var imgItem = document.createElement('div');
         var pic = document.createElement('img');
         imgItem.classList.add('image__item');
-        pic.setAttribute('src',srcUrl);
-        imgItem.appendChild(pic);
+        imgItem.style.backgroundImage = 'url('+srcUrl+')';
         imageContainer.appendChild(imgItem);
         //append tags
         var tagContainer = document.createElement('div');
         tagContainer.classList.add('image__tag');
         tagContainer.innerHTML='<span>'+tag.split(', ')+'</span>';
-        imageContainer.appendChild(tagContainer);
+        //imageContainer.appendChild(tagContainer);
+        imgItem.appendChild(tagContainer);
 
     }
 
