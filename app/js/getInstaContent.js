@@ -6,6 +6,7 @@ var App = (function (k,t) {
     var token = arrayReqUrl[1];
     var reqUrl = url+'?access_token='+token;   //create content request url
 
+
     var init = function () {
 
         getImages();
@@ -14,13 +15,26 @@ var App = (function (k,t) {
     function getImages(){
 
         t.get(reqUrl,function(resData){
-            //console.log(resData);
+
             resData.data.forEach(function(element){
                 var resImage = element.images.standard_resolution.url;
                 var resTag = element.caption.text;
                 appendImages(resImage,resTag);
             });
+
+            //insta profile image once
+            var resUsrImg = resData.data[0].caption.from.profile_picture;
+            appendUserImage(resUsrImg);
         })
+    }
+
+    function appendUserImage(usrImg){
+        var imgContainer = document.querySelector('.header__profile');
+        var imgItem = document.createElement('img');
+        imgItem.setAttribute('src',usrImg);
+        imgItem.classList.add('header__profImg');
+        imgContainer.appendChild(imgItem);
+
     }
 
 
