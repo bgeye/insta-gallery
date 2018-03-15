@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*stylesheet for insta api demo*/
+body {
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  color: #cccccc; }
+
+img {
+  padding: 20px; }
+
+ul, li {
+  list-style: none; }
