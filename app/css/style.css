@@ -1,5 +1,11 @@
 @charset "UTF-8";
 /*stylesheet for insta api demo*/
+/*
+    insta colors
+    http://www.color-hex.com/color-palette/20465
+    https://brandcolors.net/b/instagram
+
+*/
 * {
   padding: 0;
   margin: 0; }
@@ -11,12 +17,13 @@ body {
   height: 100%; }
 
 .insta {
-  width: 1200px;
-  margin: 0 auto; }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px; }
 
 .main {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
   grid-auto-rows: 232px;
   grid-gap: 10px; }
 
