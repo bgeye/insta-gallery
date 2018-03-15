@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*stylesheet for insta api demo*/
+<<<<<<< HEAD
 body {
   font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
   color: #cccccc; }
@@ -9,3 +10,58 @@ img {
 
 ul, li {
   list-style: none; }
+=======
+/*
+    insta colors
+    http://www.color-hex.com/color-palette/20465
+    https://brandcolors.net/b/instagram
+
+*/
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: “Helvetica Neue”, Helvetica, Arial, sans-serif;
+  color: tomato;
+  width: 100%;
+  height: 100%; }
+
+.insta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  grid-auto-rows: 232px;
+  grid-gap: 10px; }
+
+.image__tag {
+  padding: 5px;
+  color: #ffffff;
+  display: none; }
+
+.image__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%; }
+  .image__item:hover .image__tag {
+    background-color: tomato;
+    display: block; }
+
+.header {
+  height: 50px;
+  position: relative;
+  margin-top: 25px; }
+  .header__profile {
+    position: absolute;
+    right: 0;
+    top: 5px; }
+  .header__profImg {
+    width: 54px;
+    clip-path: circle(50%); }
+>>>>>>> 11bfad8519913ab3ff7f385f7f86dea1f3a5aaf8
