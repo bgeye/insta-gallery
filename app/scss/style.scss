@@ -32,6 +32,13 @@ body{
 
 
 .image{
+
+     &__tag{
+        padding:5px;
+        color: $white;
+        display:none;
+     }
+
     &__item{
 
          background-size:cover;
@@ -39,10 +46,29 @@ body{
          background-position:center center;
          width:100%;
          height:100%;
-     }
 
-     &__tag{
-        padding:5px;
-        color: $white;
+        &:hover .image__tag{
+             background-color:tomato;
+             display:block
+         }
      }
 }
+
+
+.header{
+    height:50px;
+    position:relative;
+    margin-top:25px;
+    &__profile{
+        position:absolute;
+        right:0;
+        top:5px;
+    }
+
+    &__profImg{
+        width:54px;
+        clip-path:circle(50%);
+    }
+
+}
+
