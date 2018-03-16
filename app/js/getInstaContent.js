@@ -25,7 +25,7 @@ var App = (function (k,t) {
             //insta profile image once
             var resUsrImg = resData.data[0].caption.from.profile_picture;
             appendUserImage(resUsrImg);
-        })
+        });
     }
 
     function appendUserImage(usrImg){
@@ -57,12 +57,12 @@ var App = (function (k,t) {
     function getReqUrl(){
             var key = k.getKey();
             return key;
-        };
+        }
 
 
     return {
         init: init
-    }
+    };
 
 })(Key,Tools);
 App.init();

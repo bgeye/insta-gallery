@@ -4,8 +4,11 @@ const gulp = require('gulp');
 
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
+const cssnano = require('gulp-cssnano');
 const jshint = require('gulp-jshint');
 const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const useref = require('gulp-useref');
 
 
 gulp.task('default',function() {                     //run with 'gulp' or 'gulp default'
@@ -31,7 +34,7 @@ gulp.task('browserSync',function() {
    browserSync.init({
        server: {
            baseDir: 'app'
-       },
+       }
    }) ;
 });
 
@@ -40,6 +43,8 @@ gulp.task('lint',function() {
        .pipe(jshint())
        .pipe(jshint.reporter('default'));
 });
+
+
 
 
 

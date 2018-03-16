@@ -14,18 +14,18 @@ var Tools = (function () {
               }else{
                   console.log('Server Error');
               }
-          }
+          };
 
           request.onerror = function(){
               console.log('server not reachable');
-          }
+          };
 
           request.send();
 
-    }
+    };
 
     return{
         get: get
     };
 
-})()
+})();
